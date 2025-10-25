@@ -30,6 +30,7 @@ async function reviewCode(diffText:string) {
       B --> C[Saves changes]
       C --> D[Commits with message]
       D --> E[End]
+      not simple one  flow daigram sequnce diagram like that
     \`\`\`
     
     Now analyze this commit and generate:

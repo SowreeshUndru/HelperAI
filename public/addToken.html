@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add GitHub Token</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    input {
+      margin: 10px 0;
+      padding: 8px;
+      width: 100%;
+    }
+    button {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Add GitHub Token</h2>
+  <form id="tokenForm">
+    <input type="text" id="name" name="name" placeholder="Enter your name" required /><br />
+    <input type="password" id="token" name="token" placeholder="Enter your token" required /><br />
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="status"></p>
+
+  <script>
+    const form = document.getElementById("tokenForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const token = document.getElementById("token").value;
+
+      const res = await fetch("/addToken", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, token }),
+      });
+
+      const text = await res.text();
+      document.getElementById("status").innerText = text;
+      form.reset();
+    });
+  </script>
+</body>
+</html>

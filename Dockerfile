@@ -3,7 +3,8 @@ WORKDIR /AIHelper
 
 COPY ./package.json ./package.json
 RUN npm install
-RUN npx ngrok config add-authtoken 34XqQrNtca0lxp3BTewQACQ66RI_2DbmAiMPD2L4JQJsgfKaz
+ARG NGROK_AUTHTOKEN
+RUN npx ngrok config add-authtoken $NGROK_AUTHTOKEN
 COPY . .
 EXPOSE 3000
 

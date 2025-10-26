@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  aihelper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+    image: aihelper:0.1.0
+    container_name: aihelper_container
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      GITHUB_API_KEY: ${GITHUB_API_KEY}
+      MONGODB_URI: ${MONGODB_URI}
+    command: >
+      sh -c "npm run webhook & npm run dev"

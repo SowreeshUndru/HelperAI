@@ -1,4 +1,6 @@
+
 name: Node.js CI/CD
+
 
 on:
   push:
@@ -6,17 +8,26 @@ on:
   pull_request:
     branches: [ "main" ]
 
+
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
 
     steps:
+
      - name: SSH into server and restart Docker container
+
        run: |
+
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/ssh_key
+
           chmod 600 ~/ssh_key
 
+
           mkdir -p ~/.ssh
+
           echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
           ssh -o StrictHostKeyChecking=no -i ~/ssh_key ubuntu@13.51.201.242 \

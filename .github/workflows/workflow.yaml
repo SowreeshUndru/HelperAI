@@ -7,21 +7,27 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-     - name: SSH into server and restart Docker container
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-       run: |
+      - name: Add SSH key and known hosts
+        run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/ssh_key
-
           chmod 600 ~/ssh_key
           mkdir -p ~/.ssh
           echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
-          ssh -o StrictHostKeyChecking=no -i ~/ssh_key ubuntu@13.51.201.242 \
-            "cd AIhelper ||git pull  https://github.com/SowreeshUndru/HelperAI.git || cd HelperAI || npm install || npm run webhook || npm run dev "
-
-            
-        
-      
+      - name: SSH into EC2 and deploy
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ~/ssh_key ubuntu@13.51.201.242 << 'EOF'
+            cd ~/HelperAI || git clone https://github.com/SowreeshUndru/HelperAI.git
+            cd HelperAI
+            git pull origin main
+            npm install
+            docker compose down || true
+            docker compose up -d --build
+          EOF

@@ -20,8 +20,8 @@ jobs:
           echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
           ssh -o StrictHostKeyChecking=no -i ~/ssh_key ubuntu@13.51.201.242 << 'EOF'
-            cd ~/AIhelper || exit
-            git clone https://github.com/SowreeshUndru/HelperAI.git
+            cd ~/AIhelper/HelperAI || 
+            git pull origin main
             npm install
-            pm2 restart all || npm run dev
+             || npm run webook || npm run dev
           EOF

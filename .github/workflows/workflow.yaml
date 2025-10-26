@@ -21,7 +21,7 @@ jobs:
 
           ssh -o StrictHostKeyChecking=no -i ~/ssh_key ubuntu@13.51.201.242 << 'EOF'
             cd ~/AIhelper || exit
-            git pull https://github.com/SowreeshUndru/HelperAI.git
+            git clone https://github.com/SowreeshUndru/HelperAI.git
             npm install
             pm2 restart all || npm run dev
           EOF

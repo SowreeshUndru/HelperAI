@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "npx tsc && node dist/index.js",
-    "dev": "npx tsc && node dist/index.js",
+    "start": " node dist/index.js",
+    "dev": "node dist/index.js",
     "webhook": "ngrok http --url=malpighiaceous-stuffed-lorina.ngrok-free.dev 3000"
   },
   "keywords": [],

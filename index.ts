@@ -115,7 +115,7 @@ app.post("/comment", async (req, res) => {
     await axios.post(
       commentUrl,
       {
-        body: ` **AI Code Review (SowreeshHelperAI)**\n\n${aiResponse}`,
+        body: ` **AI Code Review (hlprAI)**\n\n${aiResponse}`,
       },
       {
         headers: {

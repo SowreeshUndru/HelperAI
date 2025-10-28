@@ -92,7 +92,7 @@ app.post("/comment", async (req, res) => {
         }
         console.log("newtoken:", newtoken);
         await axios.post(commentUrl, {
-            body: ` **AI Code Review (SowreeshHelperAI)**\n\n${aiResponse}`,
+            body: ` **AI Code Review (hlprAI)**\n\n${aiResponse}`,
         }, {
             headers: {
                 Authorization: `token ${newtoken}`,
@@ -112,4 +112,5 @@ app.post("/comment", async (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
     console.log(` Running on port ${process.env.PORT || 3000}`);
 });
+//lastf
 //# sourceMappingURL=index.js.map

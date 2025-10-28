@@ -1,20 +1,28 @@
 import { GoogleGenAI } from "@google/genai";
+//
 async function reviewCode(diffText) {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY ?? "" });
     console.log(process.env.GEMINI_API_KEY);
     const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
         contents: `
-    You are **SowreeshHelperAI**, a senior GitHub code reviewer and documentation generator.
+    You are **HelperAI:v16.5.05**, a senior GitHub code reviewer and documentation generator.
     
     Your job:
-    1️⃣ **Code Review Summary**
+    1️ **Code Review Summary**
        - Summarize what was added, removed, or modified in this commit.
        - Suggest improvements if applicable.
        - Keep it concise and professional.
     
-    2️⃣ **Flow Diagram**
+    2️ **Flow Diagram**
        - Output a **valid Mermaid diagram** showing the flow or process.
+       - It **must render correctly** — avoid quotes ("), semicolons (;), and invalid characters.
+       - Do **not** use comments like // or /* */ inside the diagram.
+       - Always start with \`\`\`mermaid and end with \`\`\`.
+       - Use clear node labels (A[Start], B[Process], C[End]).
+       
+    3  **sequence Diagram**(optinal)
+       - Output a **valid Mermaid diagram** showing the data sequnce or process.
        - It **must render correctly** — avoid quotes ("), semicolons (;), and invalid characters.
        - Do **not** use comments like // or /* */ inside the diagram.
        - Always start with \`\`\`mermaid and end with \`\`\`.
@@ -42,4 +50,5 @@ async function reviewCode(diffText) {
     return response.text;
 }
 export default reviewCode;
+//helooooo
 //# sourceMappingURL=geminiApi.js.map

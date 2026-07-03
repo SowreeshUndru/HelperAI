@@ -118,3 +118,19 @@ Trigger: pushing code to the `main` branch 🚀
 
 **Author:** [Undru Sowreesh](https://github.com/SowreeshUndru)  
 📧 sowreeshundru@gmail.com
+
+
+
+
+To use it :
+
+1)Generate a GitHub Personal Access Token (PAT) with the required repository permissions.
+2)Copy the generated token and submit your GitHub username and PAT at: https://helperai.onrender.com/addToken.html
+3)Open your GitHub repository → Settings → Webhooks.
+4)Add the AIHelper webhook URL: https://helperai.onrender.com/comment and set the Content-Type to application/json.
+5)Enable the Push event (or the required repository events) and save the webhook.
+6)Setup is complete! You can now enjoy AI-powered code review and commit summarization.
+7)Push a new commit to your repository to automatically trigger AIHelper and receive AI-generated review feedback.
+
+
+

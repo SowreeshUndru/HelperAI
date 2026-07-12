@@ -1,11 +1,11 @@
-#  AIHelper 2.0
+#  AIHelper 1.0
 
 AIHelper is a backend automation tool that reviews each GitHub commit, generates AI-based feedback, and posts comments with detailed flow diagrams.  
 Built using **Node.js**, **TypeScript**, **Gemini API**, and **GitHub Webhooks**, it automates intelligent code review and visualization.
 
 ---
 
-## ⚙️ Local Development Setup
+ Local Development Setup
 
 ### 1️ Clone the Repository     
 ```bash
@@ -110,7 +110,7 @@ Trigger: pushing code to the `main` branch 🚀
 📧 sowreeshundru@gmail.com
 
 
- How to use it ( Implementation ) :
+ How to use it:
 1)Generate a GitHub Personal Access Token (PAT) with the required repository permissions.
 2)Copy the generated token and submit your GitHub username and PAT at: https://helperai.onrender.com/addToken.html
 3)Open your GitHub repository → Settings → Webhooks.

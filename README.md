@@ -7,7 +7,7 @@ Built using **Node.js**, **TypeScript**, **Gemini API**, and **GitHub Webhooks**
 
 ## ⚙️ Local Development Setup
 
-### 1️ Clone the Repository
+### 1️ Clone the Repository     
 ```bash
 git clone https://github.com/SowreeshUndru/HelperAI.git
 cd HelperAI

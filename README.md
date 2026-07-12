@@ -130,7 +130,7 @@ To use it :
 4)Add the AIHelper webhook URL: https://helperai.onrender.com/comment and set the Content-Type to application/json.
 5)Enable the Push event (or the required repository events) and save the webhook.
 6)Setup is complete! You can now enjoy AI-powered code review and commit summarization.
-7)Push a new commit to your repository to automatically trigger AIHelper and receive AI-generated review feedback
+7)Push a new commit to your repository to automatically trigger AIHelper and receive AI-generated review feedback.
 
 
 

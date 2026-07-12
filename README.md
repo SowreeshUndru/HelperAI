@@ -105,11 +105,6 @@ This project supports **continuous deployment** via **GitHub Actions**:
 
 Trigger: pushing code to the `main` branch 🚀
 
----
-
-
-
----
 
 **Author:** [Undru Sowreesh](https://github.com/SowreeshUndru)  
 📧 sowreeshundru@gmail.com
@@ -117,8 +112,7 @@ Trigger: pushing code to the `main` branch 🚀
 
 
 
-To use it :
-
+How to use it:
 1)Generate a GitHub Personal Access Token (PAT) with the required repository permissions.
 2)Copy the generated token and submit your GitHub username and PAT at: https://helperai.onrender.com/addToken.html
 3)Open your GitHub repository → Settings → Webhooks.

@@ -107,12 +107,7 @@ Trigger: pushing code to the `main` branch 🚀
 
 ---
 
-## 🧠 Tech Stack
-- **Backend:** Node.js, TypeScript, Express.js  
-- **AI & Visualization:** Gemini API  
-- **Database:** MongoDB  
-- **Automation:** GitHub Webhooks  
-- **Deployment:** Docker, Docker Compose, GitHub Actions, AWS EC2  
+
 
 ---
 

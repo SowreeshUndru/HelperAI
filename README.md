@@ -1,4 +1,4 @@
-# 🧠 AIHelper
+#  AIHelper
 
 AIHelper is a backend automation tool that reviews each GitHub commit, generates AI-based feedback, and posts comments with detailed flow diagrams.  
 Built using **Node.js**, **TypeScript**, **Gemini API**, and **GitHub Webhooks**, it automates intelligent code review and visualization.
@@ -7,18 +7,18 @@ Built using **Node.js**, **TypeScript**, **Gemini API**, and **GitHub Webhooks**
 
 ## ⚙️ Local Development Setup
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 ```bash
 git clone https://github.com/SowreeshUndru/HelperAI.git
 cd HelperAI
 ```
 
-### 2️⃣ Install Dependencies
+### 2️ Install Dependencies
 ```bash
 npm install
 ```
 
-### 3️⃣ Configure Environment Variables
+### 3️ Configure Environment Variables
 Create a `.env` file in the project root with the following content:
 
 ```env
@@ -29,26 +29,26 @@ MONGODB_URI=
 NGROK_AUTHTOKEN=
 ```
 
-> ⚠️ Replace the above values with your own API keys and credentials.
+>  Replace the above values with your own API keys and credentials.
 
 ---
 
-### 4️⃣ Setup a Constant Ngrok Domain
+### 4️ Setup a Constant Ngrok Domain
 1. Visit [https://ngrok.com](https://ngrok.com)
 2. Get a **static domain**
 3. Add that domain (e.g., `https://malpighiaceous-stuffed-l.ngrok-free.dev`) inside your `.env` file.
 
 ---
 
-### 5️⃣ Run the Application Locally
+### 5️ Run the Application Locally
 Use **two terminals**:
 
-#### 🖥️ Terminal 1 – Start Webhook
+####  Terminal 1 – Start Webhook
 ```bash
 npm run webhook
 ```
 
-#### 🖥️ Terminal 2 – Start Server
+####  Terminal 2 – Start Server
 ```bash
 npm run dev
 ```
@@ -110,7 +110,8 @@ Trigger: pushing code to the `main` branch 🚀
 📧 sowreeshundru@gmail.com
 
 
-( How to use it ):
+ How to use it :
+
 1)Generate a GitHub Personal Access Token (PAT) with the required repository permissions.
 2)Copy the generated token and submit your GitHub username and PAT at: https://helperai.onrender.com/addToken.html
 3)Open your GitHub repository → Settings → Webhooks.
